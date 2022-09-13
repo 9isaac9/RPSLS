@@ -6,4 +6,4 @@ class Human:
 
     def select_gesture(self):
         super().__init__()
-        self.
+        self.select_gesture

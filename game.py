@@ -3,8 +3,8 @@ from player import Player
 
 class Game:
     def __init__(self):
-        self.human = ()
-        self.Ai = ()    
+        self.human()
+        self.Ai()    
         
     def run_game(self):
         self.greeting()
@@ -15,7 +15,7 @@ class Game:
         print("Welcome to RPSLS")
 
     def rules_of_game(self):
-        print("Each math will be bestof three gmes.  Use the number keyto enter your selection")
+        print("Each match will be best of three games.  Use the number key to enter your selection")
         
 
         print("Scissor cut Paper")
@@ -38,3 +38,14 @@ class Game:
         print("choose 4 for Spock")
 
         print(input("Choose your gesture"))
+
+    def winner(self):
+        self.ai_number = "computer"
+        self.human_number = "Tod"
+
+    if ("ai_number - human_number") % 5 == 0:
+        outcome = "ai and human Tie!"
+    elif ("ai_number - human_number" ) % 5 > 2:
+        outcome = "Human Wins!"
+    else:
+        outcome = "Ai Wins!"
