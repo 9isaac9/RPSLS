@@ -5,6 +5,7 @@ class Player:
     def __init__(self):
         self.gesture_number = ()
         self.gesture_name = ()
+        self.name = "TOD"
         
 
     def gesture_number(self):
