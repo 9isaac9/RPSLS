@@ -6,9 +6,9 @@ class Player:
     def __init__(self):
         self.gesture_number()
         self.gesture_name()
-        self.the_winner_is()
-        self.name = "TOD"
-        self.name = "computer"
+        self.select_gesture = ["Rock","Paper","Scissors","Lizard","Spock"]
+        self.name = "Player_one"
+        self.name = "Ai"
 
         
 

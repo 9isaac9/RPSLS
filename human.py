@@ -1,7 +1,9 @@
 from random import choice
+
 class Human:
     def __init__(self):
-        self.gesture_list =  ["Rock","Paper","Scissors","Lizard","Spock"]
+        self.name = "Player_one"
+        self.gesture_list =  ['Rock','Paper','Scissors','Lizard','Spock']
 
 
     def select_gesture(self):
