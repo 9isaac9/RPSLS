@@ -1,10 +1,10 @@
 from random import choice
+from player import Player
 
-class Ai:
+class Ai(Player):
     def __init__(self):
-        self.name = "Ai"
-        self.gesture_list = {'Rock','Paper','Scissors','Lizard','Spock'}
-
-    def select_gesture(self,name):
         super().__init__()
-        self.select_gesture
+        self.gesture_list = {'Rock','Paper','Scissors','Lizard','Spock'}
+    def select_gesture(self):
+        self.random.choice(self.gesture_list)
+        print(self.gesture_list)

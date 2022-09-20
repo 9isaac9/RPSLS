@@ -1,14 +1,14 @@
 
-from ai import Ai
-from human import Human
+
 
 class Player:
     def __init__(self):
+        self.name = "Ai"
+        self.name = "Player_one"
         self.gesture_number()
         self.gesture_name()
         self.select_gesture = ["Rock","Paper","Scissors","Lizard","Spock"]
-        self.name = "Player_one"
-        self.name = "Ai"
+        
 
         
 
