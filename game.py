@@ -1,20 +1,22 @@
 
 import random
-# from player import Player
+from player import Player
+from human import Human
+from ai import Ai
 
 class Game:
     
     def __init__(self):
-        self.Ai = "Ai" 
-        self.player_one = "player_one"
+        self.player_one = Human()
+        self.player_two = Ai()
+        
            
         
     def run_game(self):
         self.greeting()
         self.rules_of_game()
-        self.player_choice_rpsl("Rock","Paper""Scissors","Lizard","Spock")
+       
         
-
     def greeting(self):
         print("Welcome to RPSLS")
 
@@ -33,56 +35,73 @@ class Game:
         print()
         print(input("How many players 1,2,or 3 for a surprise? "))
         print()
-        print("Choose 0 for Rock.")
-        print("Choose 1 for Paper")
-        print("Choose 2 for Scissors")
-        print("Choose 3 for Lizard")
-        print("choose 4 for Spock")
-        print()
-        print(input("Choose your gesture "))
-
-    def name_to_number(self,name):
-        if name == "Rock":
-            return 0
-        elif name == "Paper":
-            return 1
-        elif name == "Scissors":
-            return 2
-        elif name == "Lizard":
-            return 3
-        elif name == "Spock":
-            return 4
-
-    def number_to_name (self,number):
-        if number == 0:
-            return "Rock"
-        elif number == 1:
-            return "Paper"
-        elif number == 2:
-            return "Scissors"
-        elif number == 3:
-            return "Lizard"
-        elif number == 4:
-            return "Spock"
-   
-
-    def player_choice_rpsls(self,player_choice):
-        self.player_choice = player_choice
-        self.random.choice(self.gesture_list)
-        print("The player chose" + player_choice)
-        player_number = "name_to_number" (player_choice)
-        print()  
-
     
-        ai_number = random.randrange(0,5)
-        player_number = (0,5)
-        if ai_number - player_number % 5 == 0:
-            outcome = "ai and human Tie!"
-        elif ai_number - player_number % 5 > 2:
-            outcome = "Player_one Wins!"
-        else:
-            outcome = "Ai Wins!"
+   
+player_score = 0
+ai_score = 0
+
+
+print("Rock","Paper","Scissors","Lizard","Spock")
+while player_score < 3 and ai_score < 3:
+    player_choice = input("\nChoose 'Rock','Paper','Scissors','Lizard','Spock' \n").upper()
+
+    while player_choice not in ["Rock","Paper","Scissors","Lizard","Spock"]:
+        player_choice = input("\nChoose 'Rock','Paper','Scissors','Lizard','Spock' \n")       
+    ai_choice = random.choice(['Rock','Paper','Scissors','Lizard','Spock'])
+    print("Player Choice:", player_choice)
+    print("AI Choice:", ai_choice)
+
+    if player_choice == "Rock" and ai_choice == "Paper":
+        ai_score += 1
+    elif player_choice == "Rock" and ai_choice== "Scissors":
+        player_score += 1
+    elif player_choice == "Rock" and ai_choice == "Lizard":
+        ai_score += 1
+    elif player_choice == "Rock" and ai_choice == "Spock":
+        player_score += 1
+    elif player_choice == "Paper" and ai_choice == "Rock":
+        ai_score += 1
+    elif player_choice == "Paper" and ai_choice == "Scissors":
+        player_score += 1
+    elif player_choice == "Paper" and ai_choice == "Lizard":
+        ai_score += 1
+    elif player_choice == "Paper" and ai_choice == "Spock":
+        player_score += 1
+    elif player_choice == "Sissors" and ai_choice == "Rock":
+        ai_score += 1
+    elif player_choice == "Scissors" and ai_choice == "Paper":
+        player_score += 1
+    elif player_choice == "Scissors" and ai_choice == "Lizard":
+        ai_score += 1
+    elif player_choice == "Scissor" and ai_choice == "Spock":
+        player_score += 1
+    elif player_choice == "Lizard" and ai_choice == "Rock":
+        ai_score += 1
+    elif player_choice == "Lizard"  and ai_choice == "Paper":
+        player_score += 1
+    elif player_choice == "Lizard" and ai_choice == "Scissors":
+        ai_score += 1
+    elif player_choice == "Lizard" and ai_choice == "Spock":
+        player_score += 1
+    elif player_choice == "Spock" and ai_choice == "Rock":
+        ai_score += 1
+    elif player_choice == "Spock" and ai_choice == "Paper":
+        player_score += 1
+    elif player_choice == "Spock" and ai_choice == "Scissors":
+        ai_score += 1
+    elif player_choice == "Spock" and ai_choice == "Lizard":
+        player_score += 1
+    else:
+        print("Tie")
+    print("Player_Score:",player_score)
+    print("AI Score:",ai_score)
+
+if player_score > ai_score:
+    print("\nYou win!")
+else:
+    print("\nYou lose")
         
-        print(input("Would you like to play again? "))
+    print(input("Would you like to play again? "))
+
 
     

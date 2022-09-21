@@ -3,41 +3,63 @@
 
 class Player:
     def __init__(self):
-        self.name = "Ai"
-        self.name = "Player_one"
-        self.gesture_number()
-        self.gesture_name()
-        self.select_gesture = ["Rock","Paper","Scissors","Lizard","Spock"]
+        self.selected_gesture = ''
+        self.wins = 0
+        self.gesture_list = ["Rock","Paper","Scissors","Lizard","Spock"]
+        
         
 
+    def player_choice(self,player_choice):
+        self.player_choice
+    def ai_choice(self,player_choice):
+        self.ai_choice
+    def player_score(self,player_score):
+        self.player_score
+    def ai_score(self,ai_score):
+        self.ai_score
+
+    player_choice == "Rock" and ai_choice == "Paper"
+      
+    player_choice == "Rock" and ai_choice== "Scissors"
+       
+    player_choice == "Rock" and ai_choice == "Lizard"
+
+    player_choice == "Rock" and ai_choice == "Spock"
+       
+    player_choice == "Paper" and ai_choice == "Rock"
+        
+    player_choice == "Paper" and ai_choice == "Scissors"
+        
+    player_choice == "Paper" and ai_choice == "Lizard"
+    
+    player_choice == "Paper" and ai_choice == "Spock"
+        
+    player_choice == "Sissors" and ai_choice == "Rock"
+    
+    player_choice == "Scissors" and ai_choice == "Paper"
+        
+    player_choice == "Scissors" and ai_choice == "Lizard"
+     
+    player_choice == "Scissor" and ai_choice == "Spock"
+        
+    player_choice == "Lizard" and ai_choice == "Rock"
+       
+    player_choice == "Lizard"  and ai_choice == "Paper" 
+
+    player_choice == "Lizard" and ai_choice == "Scissors"
+        
+    player_choice == "Lizard" and ai_choice == "Spock"
+       
+    player_choice == "Spock" and ai_choice == "Rock"
+    
+    player_choice == "Spock" and ai_choice == "Paper"
+      
+    player_choice == "Spock" and ai_choice == "Scissors"
+      
+    player_choice == "Spock" and ai_choice == "Lizard"
+   
         
 
-    def gesture_number(self):
-        self.number()
-        if (number) == 0:
-            number == "Rock"
-        elif (number) == 1:
-            number = "Paper"
-        elif (number) == 2:
-            number = "Scissors"
-        elif number == 3:
-            number = "Lizard"
-        elif number == 4:
-            number = "Spock"
-
-    def gesture_name(self):
-        if (name) == "Rock":
-            name == 0
-        elif (name) == "Paper":
-            name = 1
-        elif (name) == "Scissors":
-            name = 2
-        elif (name) == "Lizard":
-            name = 3
-        elif (name) == "Spock":
-            name = 4
-        else:
-            name = "Invalid input"
 
         
 
